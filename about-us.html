@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Whisper&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Whisper&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Whisper&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="about-us.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deaf Awareness</title>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="images/logo.png" class="logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dictionary.html">Dictionary</a></li>
+                <li><a href="contact.html">Contact Expert</a></li>
+                <li><a href="#">About Us</a></li>
+            </ul>
+            <button type="button" class="donate"><a href="https://secure.hhf.org/site/Donation2?1400.donation=form1&df_id=1400&_ga=2.164311223.901985052.1706713805-1947314316.1705849385&_gl=1*153quih*_ga*MTk0NzMxNDMxNi4xNzA1ODQ5Mzg1*_ga_H2Z5VSRBRR*MTcwNjcxMzgwNC4yLjAuMTcwNjcxMzgwNC42MC4wLjA." target="_blank">DONATE</a></button>
+        </div>
+    </div>
+    <div class="heading">
+        <h1>DEAF AWARNESS</h1>
+        <h2>Experience the Deaf</h2>
+        <h3>ABOUT US</h3>
+    </div>
+    <hr>
+    <ul class="tabs">
+        <li class="active" data-id="0">Vision</li>
+        <li data-id="1">Goals</li>
+    </ul>
+    <div class="contents">
+        <div class="box show" data-content="0">
+            <img src="images/vision.png" alt="">
+            <div>
+                <h3>Vision</h3>
+                <p>
+                Our vision is that everyone needs to be able to use sign language and talk to any deaf person. We want a world where all the deaf people have equal opportunities to jobs and education. Where everyone treats deaf people the way they treat normal people. Mainly to help people learn sign language so they can communicate better with people around them who have hearing loss.
+                </p>
+            </div>
+        </div>
+        <div class="box hide" data-content="1">
+            <img src="images/goal.png" alt="">
+            <div>
+                <h3>Goals</h3>
+                <p>
+                    Following our vision, our goal is to first reach out to as many people as possible using campaigns, advertising, and even spreading awareness using the internet through social media platforms such as Instagram, Facebook, and X (was known as Twitter). 
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        'use strict';
+const tabs = document.querySelectorAll('[data-id]');
+const contents = document.querySelectorAll('[data-content]');
+let id = 0;
+
+tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+        tabs[id].classList.remove('active');
+        tab.classList.add('active');
+        id = tab.getAttribute('data-id');
+        contents.forEach(function (box) {
+            box.classList.add('hide');
+            if (box.getAttribute('data-content') == id){
+                box.classList.remove('hide');
+                box.classList.add('show');
+            }
+        });
+    });
+});
+    </script>
+    <hr>
+    <section class="footer">
+        <div class="footer-content">
+            <img class="footer-logo" src="images/logo.png">
+            <h3 class="footer-text">Deaf Awareness</h3>
+            <div class="icons">
+                <a href="https://www.facebook.com/AKAMombasa/" target="_blank"><i class="bx bxl-facebook-circle"></i></a>
+                <a href="https://twitter.com/AKAcademies" target="_blank"><i class="bx bxl-twitter"></i></a>
+                <a href="https://www.instagram.com/akamombasa/" target="_blank"><i class="bx bxl-instagram-alt"></i></a>
+                <a href="https://www.youtube.com/channel/UCkv6z0v_Kp5tbfTVWnJyuWw" target="_blank"><i class="bx bxl-youtube"></i></a>
+                <a href="https://www.agakhanacademies.org/mombasa" target="_blank"><i class="bx bxl-google"></i></a>
+            </div>
+        </div>
+        <div class="footer-content">
+            <h4>Quick Links</h4>
+            <ul class="smt">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="dictionary.html">DICTIONARY</a></li>
+                <li><a href="contact.html">CONTACT EXPERT</a></li>
+                <li><a href="#">ABOUT US</a></li>
+            </ul>
+        </div>
+    </section>
+</body>
+</html>
